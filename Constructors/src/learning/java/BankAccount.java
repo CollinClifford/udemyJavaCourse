@@ -7,6 +7,25 @@ public class BankAccount {
     private String email;
     private long phoneNumber;
 
+    public BankAccount() {
+        this(67890, 22.22, "John Doe", "myemail@email.com", 5555555);
+    }
+
+    public BankAccount(int accountNumber, double balance, String customerName, String email, long phoneNumber) {
+        this.phoneNumber = phoneNumber;
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.customerName = customerName;
+        this.email = email;
+    }
+
+    public BankAccount(String customerName, String email, long phoneNumber) {
+        this(00000, 105.00, customerName, email, phoneNumber);
+        this.customerName = customerName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
     public void setAccountNumber(int accountNumber) {
         this.accountNumber = accountNumber;
     }
